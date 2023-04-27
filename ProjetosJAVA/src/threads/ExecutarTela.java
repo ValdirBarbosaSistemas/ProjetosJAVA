@@ -3,6 +3,8 @@ package threads;
 public class ExecutarTela {
 	public static void main(String[] args) {
 		//Chamando a tela criada
-		TelaTimeThreads telaTimeThread = new TelaTimeThreads();
+		/* TelaTimeThreads telaTimeThread = new TelaTimeThreads(); */
+		
+		TelaThreadsPilhaFilha telaThreadsPilhaFila = new TelaThreadsPilhaFilha();
 	}
 }
