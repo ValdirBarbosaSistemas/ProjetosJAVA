@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Datas {
@@ -50,11 +51,22 @@ public class Datas {
 		 */
 
 		/**
-		 * Em date há também outas classes como veremos abaixo
+		 * A partir do Java 8, chega a nova API de datas como veremos abaixo
 		 */
 
 		LocalDate localDate = LocalDate.now();//Mostra a data local
 		LocalDateTime localDateTime = LocalDateTime.now();//Mostra a data e hora atual
 		Instant instant = Instant.now();//Mostra a data e hora GLOBAL GMT
+		
+		
+		/*-------------------NOVO TIPO DE FORMATACAO DE DATAS-------------------*/
+		
+		System.out.println("LocalDateFormat com formatação: " + localDateTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")));
+		
+		//Dia, mes, ano e semana
+		
+		System.out.println("Dia da semana: " + localDate.getDayOfWeek());
+		System.out.println("Dia do mês: " + localDate.getDayOfMonth());
+		System.out.println("Dia do ano: " + localDate.getDayOfYear());
 	}
 }
