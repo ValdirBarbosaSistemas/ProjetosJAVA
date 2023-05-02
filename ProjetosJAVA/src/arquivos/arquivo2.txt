@@ -1,0 +1,3 @@
+Alex; 50; pessoa1@gmail.com
+Ricardo; 30; pessoa2@gmail.com
+Valdir; 36; pessoa3@gmail.com

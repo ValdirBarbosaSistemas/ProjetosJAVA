@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
@@ -68,5 +69,22 @@ public class Datas {
 		System.out.println("Dia da semana: " + localDate.getDayOfWeek());
 		System.out.println("Dia do mês: " + localDate.getDayOfMonth());
 		System.out.println("Dia do ano: " + localDate.getDayOfYear());
+
+
+		/*-----------CONVERSAO DATA-HORA GLOBAL PARA LOCAL----------------*/
+
+		for (String s : ZoneId.getAvailableZoneIds()) {
+			System.out.println(s);//Ira mostrar todas as zonas de data GLOBAL
+		}
+
+
+		LocalDate dataLocal = LocalDate.parse("2022-07-20");
+		Instant dataGlobal = Instant.parse("2022-07-20T01:30:26Z");
+
+		LocalDate r1 = LocalDate.ofInstant(dataGlobal, ZoneId.systemDefault());//Vai pegar do PC
+		LocalDate r2 = LocalDate.ofInstant(dataGlobal, ZoneId.of("America/Sao_Paulo"));
+
+		System.out.println("r1 = " + r1);
+		System.out.println("r2 = " + r2);
 	}
 }
