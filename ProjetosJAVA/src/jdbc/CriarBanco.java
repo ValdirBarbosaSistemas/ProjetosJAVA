@@ -22,9 +22,9 @@ public class CriarBanco {
 		conexao.close();
 		
 		/**
-		 * ---------Para aprendizado---------
+		 * ---------Para aprendizado---------NELIO
 		 * 
-		 * Statement - Serve para voce montar um comando SQL para ser executado
+		 * Statement - Serve para voce montar um comando SQL para ser executado no Java
 		 * ResultSet - Vai representar um objeto contendo o resultado da nossa
 		 * consulta na forma de tabela. Com isso, podemos ter acesso a linhas e
 		 * colunas da tabela.Resumindo, vamos fazer a consulta no Statement e 

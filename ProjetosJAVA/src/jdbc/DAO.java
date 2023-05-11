@@ -28,7 +28,7 @@ public class DAO {
 				return conexao;
 			}
 		} catch (SQLException e) {
-
+			e.printStackTrace();
 		}
 
 		conexao = FabricaConexao.getConexao();
@@ -41,7 +41,7 @@ public class DAO {
 		try {
 			getConexao().close();
 		} catch (SQLException e) {
-
+			e.getMessage();
 		} finally {
 			conexao = null;
 		}
